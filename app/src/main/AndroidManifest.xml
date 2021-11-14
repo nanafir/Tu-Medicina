@@ -13,7 +13,7 @@
                 android:name=".ui.login.LoginActivity"
                 android:label="@string/title_activity_login">
         </activity>
-        <activity android:name=".ui.Loguin">
+        <activity android:name=".ui.Login">
         </activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
