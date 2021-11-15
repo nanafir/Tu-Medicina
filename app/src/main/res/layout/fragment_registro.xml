@@ -1,14 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.RegistroFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.RegistroFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+            android:id="@+id/scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/txv_titulo_registro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registro de Usuarios"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintEnd_toEndOf="@id/guiaDerecha"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                    android:id="@+id/txv_tipoDocumento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txv_tipoDocumento"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toTopOf="@+id/txv_titulo_registro" />
+
+            <EditText
+                    android:id="@+id/edt_tipoDocumento"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_tipoDocumento" />
+
+            <TextView
+                    android:id="@+id/txv_documento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_documento"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_tipoDocumento" />
+
+            <EditText
+                    android:id="@+id/edt_documento"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_documento" />
+
+            <TextView
+                    android:id="@+id/txv_primerNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_primerNombre"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_documento" />
+
+            <EditText
+                    android:id="@+id/edt_primerNombre"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_primerNombre" />
+
+            <TextView
+                    android:id="@+id/txv_segundoNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_segundoNombre"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_primerNombre" />
+
+            <EditText
+                    android:id="@+id/edt_segundoNombre"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_segundoNombre"
+                    android:layout_marginTop="10dp" />
+
+            <TextView
+                    android:id="@+id/txv_primerApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_primerApellido"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_segundoNombre" />
+
+            <EditText
+                    android:id="@+id/edt_primerApellido"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_primerApellido" />
+
+            <TextView
+                    android:id="@+id/txv_segundoApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_segundoApellido"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_primerApellido" />
+
+            <EditText
+                    android:id="@+id/edt_segundoApellido"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_segundoApellido" />
+
+            <TextView
+                    android:id="@+id/txv_usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_usuario"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_segundoApellido"
+                    android:layout_marginStart="4dp" />
+
+            <EditText
+                    android:id="@+id/edt_usuario"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_usuario" />
+
+            <TextView
+                    android:id="@+id/txv_contrasena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_contrasena"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_usuario" />
+
+            <EditText
+                    android:id="@+id/edt_contrasena"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_contrasena" />
+
+            <TextView
+                    android:id="@+id/txv_correo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txv_correo"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/edt_contrasena" />
+
+            <EditText
+                    android:id="@+id/edt_correo"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true"
+                    app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@id/txv_correo" />
+
+
+            <include
+                    android:id="@+id/filter_from_ext_transfer"
+                    layout="@layout/edittext_datepicker_layout"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@id/guiaIzquierda"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_correo"/>
+
+            <Button
+                    android:text="GUARDAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnGuardar"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/guiaDerecha"
+                    app:layout_constraintTop_toBottomOf="@+id/filter_from_ext_transfer"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            <Button
+                    android:text="LIMPIAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnLimpiar"
+                    app:layout_constraintTop_toTopOf="@id/btnGuardar"
+                    app:layout_constraintEnd_toStartOf="@id/btnGuardar" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guiaIzquierda"
+                    app:layout_constraintGuide_begin="10dp"
+                    android:orientation="vertical" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guiaDerecha"
+                    app:layout_constraintGuide_begin="400dp"
+                    android:orientation="vertical" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
