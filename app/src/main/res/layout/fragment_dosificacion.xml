@@ -5,8 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.DosificacionFragment"
-        android:background="#88C0DC">
+        tools:context=".ui.DosificacionFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,7 +15,6 @@
             android:layout_height="wrap_content"
             android:text="DOSIFICACION"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,116 +23,119 @@
             android:textStyle="bold"/>
 
     <TextView
-            android:id="@+id/txv_enfermedades"
+            android:id="@+id/txv_enfer"
             android:text="Enfermedades"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="120dp"
-            app:layout_constraintHorizontal_bias="0.194"
-            app:layout_constraintVertical_bias="0.08"
+            app:layout_constraintTop_toBottomOf="@+id/txv_titulo"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"/>
 
     <AutoCompleteTextView
-            android:id="@+id/txv_autoEnfermedades"
+            android:id="@+id/auto_enferm"
             android:layout_width="200dp"
-            android:layout_height="25dp"
-            app:layout_constraintBottom_toBottomOf="@id/txv_enfermedades"
-            app:layout_constraintStart_toEndOf="@id/txv_enfermedades"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"/>
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/txv_enfer"
+            app:layout_constraintStart_toEndOf="@id/txv_enfer"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"/>
 
     <TextView
-            android:id="@+id/txv_medicamentos"
+            android:id="@+id/txv_medicam"
             android:text="Medicamentos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_enfermedades"
-            app:layout_constraintEnd_toEndOf="@id/txv_enfermedades"
+            app:layout_constraintTop_toBottomOf="@id/txv_enfer"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:textStyle="bold"/>
 
     <AutoCompleteTextView
-            android:id="@+id/txv_autoMedicamentos"
+            android:id="@+id/auto_medic"
             android:layout_width="200dp"
             android:layout_height="20dp"
-            app:layout_constraintStart_toStartOf="@id/txv_autoEnfermedades"
-            app:layout_constraintBottom_toBottomOf="@id/txv_medicamentos"
-            app:layout_constraintTop_toTopOf="@id/txv_medicamentos"/>
+            app:layout_constraintStart_toEndOf="@id/txv_medicam"
+            app:layout_constraintBottom_toBottomOf="@id/txv_medicam"
+            app:layout_constraintTop_toTopOf="@id/txv_medicam"
+            android:layout_marginStart="10dp"/>
 
     <TextView
             android:id="@+id/txv_dosificacion"
             android:text="Dosificación"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_medicamentos"
-            app:layout_constraintEnd_toEndOf="@id/txv_medicamentos"
+            app:layout_constraintTop_toBottomOf="@id/txv_medicam"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
     <EditText
-            android:id="@+id/edit_dosis"
+            android:id="@+id/et_Dosis"
             android:layout_width="200dp"
             android:layout_height="20dp"
             app:layout_constraintBottom_toBottomOf="@id/txv_dosificacion"
-            app:layout_constraintStart_toStartOf="@id/txv_autoMedicamentos"/>
+            app:layout_constraintStart_toEndOf="@id/txv_dosificacion"
+            android:layout_marginStart="10dp"/>
 
     <TextView
-            android:id="@+id/txv_fechaInicio"
+            android:id="@+id/txv_fecInicio"
             android:text="Fecha de inicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_dosificacion"
-            app:layout_constraintEnd_toEndOf="@id/txv_dosificacion"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toBottomOf="@id/txv_medicam"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
+            android:layout_marginTop="52dp"
             android:textStyle="bold"/>
 
-    <EditText
-            android:id="@+id/edit_fechaInicial"
-            android:layout_width="200dp"
+    <DatePicker
+            android:id="@+id/edit_fecInicial"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/edit_dosis"
-            app:layout_constraintEnd_toEndOf="@id/edit_dosis"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            app:layout_constraintTop_toBottomOf="@id/et_Dosis"
+            app:layout_constraintStart_toEndOf="@id/txv_fecInicio"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"/>
 
 
     <TextView
-            android:id="@+id/txv_horaInicial"
-            android:text="Hora de toma"
+            android:id="@+id/txv_hrInicial"
+            android:text="Hora de inicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_fechaInicio"
-            app:layout_constraintEnd_toEndOf="@id/txv_fechaInicio"
+            app:layout_constraintTop_toBottomOf="@id/et_Dosis"
+            app:layout_constraintStart_toEndOf="@id/edit_fecInicial"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
 
     <EditText
-            android:id="@+id/edit_horaInicio"
-            android:layout_width="200dp"
+            android:id="@+id/et_horaInicio"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/edit_fechaInicial"
-            app:layout_constraintEnd_toEndOf="@id/edit_fechaInicial"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            app:layout_constraintTop_toBottomOf="@id/et_Dosis"
+            app:layout_constraintStart_toEndOf="@id/txv_hrInicial"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"/>
 
     <TextView
-            android:id="@+id/txv_timeTratam"
+            android:id="@+id/txv_Tratam"
             android:text="Su tratamiento es por"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_horaInicial"
-            app:layout_constraintEnd_toEndOf="@id/txv_horaInicial"
+            app:layout_constraintTop_toBottomOf="@id/txv_rango"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
     <ListView
             android:id="@+id/list_tiempos"
-            android:layout_width="200dp"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/edit_horaInicio"
-            app:layout_constraintEnd_toEndOf="@id/edit_horaInicio"
+            app:layout_constraintTop_toBottomOf="@id/txv_fecFin"
+            app:layout_constraintStart_toEndOf="@id/txv_Tratam"
             android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"
             android:background="#C6E3E6"/>
 
     <TextView
@@ -142,80 +143,94 @@
             android:text="Rango de toma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_timeTratam"
-            app:layout_constraintEnd_toEndOf="@id/txv_timeTratam"
+            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
+            app:layout_constraintStart_toEndOf="@id/edit_fecFinal"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
 
     <ListView
-            android:id="@+id/list_rangoTime"
-            android:layout_width="200dp"
+            android:id="@+id/list_rang"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/list_tiempos"
-            app:layout_constraintEnd_toEndOf="@id/list_tiempos"
+            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
+            app:layout_constraintStart_toEndOf="@id/txv_rango"
             android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"
             android:background="#C6E3E6"/>
 
     <TextView
-            android:id="@+id/txv_fechaFin"
+            android:id="@+id/txv_fecFin"
             android:text="Fecha Final"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_rango"
-            app:layout_constraintEnd_toEndOf="@id/txv_rango"
+            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
-    <EditText
-            android:id="@+id/edit_fechaFinal"
-            android:layout_width="200dp"
+    <DatePicker
+            android:id="@+id/edit_fecFinal"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/list_rangoTime"
-            app:layout_constraintEnd_toEndOf="@id/list_rangoTime"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
+            app:layout_constraintStart_toEndOf="@id/txv_fecFin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="10dp"/>
 
     <TextView
             android:id="@+id/txv_observaciones"
             android:text="Observaciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_fechaFin"
-            app:layout_constraintEnd_toEndOf="@id/txv_fechaFin"
+            app:layout_constraintTop_toBottomOf="@id/txv_Tratam"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
     <EditText
             android:id="@+id/edit_observacion"
-            android:layout_width="350dp"
-            android:layout_height="150dp"
+            android:layout_width="390dp"
+            android:layout_height="50dp"
             app:layout_constraintTop_toBottomOf="@id/txv_observaciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btn_cancelar"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:background="#C6E3E6"/>
 
     <Button
-            android:id="@+id/btn_guardar"
-            android:text="Guardar"
+            android:text="GUARDAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="50dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:textStyle="bold"/>
+            android:id="@+id/btnGuardar"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelinefin"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
-            android:id="@+id/btn_cancelar"
-            android:text="Cancelar"
+            android:text="CANCELAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:textStyle="bold"/>
+            android:id="@+id/btn_cancelar"
+            app:layout_constraintTop_toTopOf="@id/btnGuardar"
+            app:layout_constraintEnd_toStartOf="@id/btnGuardar"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guidelineinicio"
+            app:layout_constraintGuide_begin="10dp"
+            android:orientation="vertical"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guidelinefin"
+            app:layout_constraintGuide_begin="400dp"
+            android:orientation="vertical"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
