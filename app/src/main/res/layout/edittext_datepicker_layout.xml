@@ -4,14 +4,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/tv_datepicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fecha Nacimiento"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
@@ -24,9 +16,9 @@
             android:hint="dd_mm_yyyy"
             android:textSize="14sp"
             android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="@+id/tv_datepicker"
-            app:layout_constraintStart_toStartOf="@+id/tv_datepicker"
-            app:layout_constraintTop_toBottomOf="@+id/tv_datepicker" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
             android:id="@+id/iv_calendar"

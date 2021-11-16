@@ -55,10 +55,9 @@
             android:id="@+id/auto_medic"
             android:layout_width="200dp"
             android:layout_height="20dp"
-            app:layout_constraintStart_toEndOf="@id/txv_medicam"
-            app:layout_constraintBottom_toBottomOf="@id/txv_medicam"
-            app:layout_constraintTop_toTopOf="@id/txv_medicam"
-            android:layout_marginStart="10dp"/>
+            app:layout_constraintStart_toStartOf="@id/auto_enferm"
+            app:layout_constraintBottom_toBottomOf="@id/txv_medicam"/>
+
 
     <TextView
             android:id="@+id/txv_dosificacion"
@@ -75,27 +74,28 @@
             android:layout_width="200dp"
             android:layout_height="20dp"
             app:layout_constraintBottom_toBottomOf="@id/txv_dosificacion"
-            app:layout_constraintStart_toEndOf="@id/txv_dosificacion"
-            android:layout_marginStart="10dp"/>
+            app:layout_constraintStart_toStartOf="@id/auto_enferm"/>
 
     <TextView
             android:id="@+id/txv_fecInicio"
             android:text="Fecha de inicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_medicam"
+            app:layout_constraintTop_toTopOf="@id/txv_fecInicial"
+            app:layout_constraintBottom_toBottomOf="@id/txv_fecInicial"
             app:layout_constraintStart_toStartOf="@id/guidelineinicio"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
-    <DatePicker
-            android:id="@+id/edit_fecInicial"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/et_Dosis"
-            app:layout_constraintStart_toEndOf="@id/txv_fecInicio"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="10dp"/>
+
+    <include
+            android:id="@+id/txv_fecInicial"
+            layout="@layout/edittext_datepicker_layout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txv_hrInicial"
+            app:layout_constraintStart_toStartOf="@id/auto_enferm"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
 
     <TextView
@@ -103,27 +103,25 @@
             android:text="Hora de inicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/et_Dosis"
-            app:layout_constraintStart_toEndOf="@id/edit_fecInicial"
+            app:layout_constraintTop_toBottomOf="@id/txv_dosificacion"
+            app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"/>
+            android:textStyle="bold"/>
 
     <EditText
             android:id="@+id/et_horaInicio"
             android:layout_width="60dp"
             android:layout_height="20dp"
             app:layout_constraintTop_toBottomOf="@id/et_Dosis"
-            app:layout_constraintStart_toEndOf="@id/txv_hrInicial"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="10dp"/>
+            app:layout_constraintStart_toStartOf="@id/auto_enferm"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
     <TextView
             android:id="@+id/txv_Tratam"
             android:text="Su tratamiento es por"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_rango"
+            app:layout_constraintTop_toBottomOf="@id/filter_fecha"
             app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
@@ -132,19 +130,18 @@
             android:id="@+id/list_tiempos"
             android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/txv_fecFin"
+            app:layout_constraintTop_toBottomOf="@id/filter_fecha"
             app:layout_constraintStart_toEndOf="@id/txv_Tratam"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="10dp"
-            android:background="#C6E3E6"/>
+            android:layout_marginStart="10dp"/>
 
     <TextView
             android:id="@+id/txv_rango"
             android:text="Rango de toma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
-            app:layout_constraintStart_toEndOf="@id/edit_fecFinal"
+            app:layout_constraintTop_toBottomOf="@id/filter_fecha"
+            app:layout_constraintStart_toEndOf="@id/list_tiempos"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"
             android:layout_marginStart="10dp"/>
@@ -153,30 +150,31 @@
             android:id="@+id/list_rang"
             android:layout_width="60dp"
             android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
-            app:layout_constraintStart_toEndOf="@id/txv_rango"
+            app:layout_constraintTop_toBottomOf="@id/filter_fecha"
+            app:layout_constraintEnd_toEndOf="@id/guidelinefin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="10dp"
-            android:background="#C6E3E6"/>
+            android:layout_marginStart="10dp"/>
 
     <TextView
             android:id="@+id/txv_fecFin"
             android:text="Fecha Final"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
+            app:layout_constraintTop_toBottomOf="@id/txv_fecInicial"
             app:layout_constraintStart_toStartOf="@id/guidelineinicio"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:textStyle="bold"/>
 
-    <DatePicker
-            android:id="@+id/edit_fecFinal"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
-            app:layout_constraintTop_toBottomOf="@id/txv_fecInicio"
-            app:layout_constraintStart_toEndOf="@id/txv_fecFin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="10dp"/>
+
+    <include
+            android:id="@+id/filter_fecha"
+            layout="@layout/edittext_datepicker_layout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txv_fecFin"
+            app:layout_constraintBottom_toBottomOf="@id/txv_fecFin"
+            app:layout_constraintStart_toStartOf="@id/auto_enferm"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
     <TextView
             android:id="@+id/txv_observaciones"
@@ -195,8 +193,7 @@
             app:layout_constraintTop_toBottomOf="@id/txv_observaciones"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="#C6E3E6"/>
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
     <Button
             android:text="GUARDAR"
