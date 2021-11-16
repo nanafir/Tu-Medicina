@@ -3,10 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/nanaf/AndroidStudioProjects/Tu-Medicina-Frontend/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/nanaf/AndroidStudioProjects/Tu-Medicina-Frontend/app/src/main/res/layout/edittext_datepicker_layout.xml" value="0.21965579710144928" />
-        <entry key="..\:/Users/nanaf/AndroidStudioProjects/Tu-Medicina-Frontend/app/src/main/res/layout/fragment_dosificacion.xml" value="0.25" />
-        <entry key="..\:/Users/nanaf/AndroidStudioProjects/Tu-Medicina-Frontend/app/src/main/res/layout/fragment_registro.xml" value="0.264" />
+        <entry key="..\:/Users/Angelica/Documents/Hackathon/TuMedicina/app/src/main/res/layout/activity_main.xml" value="0.12273550724637682" />
+        <entry key="..\:/Users/Angelica/Documents/Hackathon/TuMedicina/app/src/main/res/layout/fragment_dosificacion.xml" value="0.12273550724637682" />
       </map>
     </option>
   </component>
