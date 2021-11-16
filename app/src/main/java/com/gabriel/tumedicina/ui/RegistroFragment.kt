@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.gabriel.tumedicina.R
-
-
+import com.gabriel.tumedicina.databinding.FragmentLoginBinding
+import com.gabriel.tumedicina.databinding.FragmentRegistroBinding
 
 
 class RegistroFragment : Fragment() {
 
+    private lateinit var binding: FragmentRegistroBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
