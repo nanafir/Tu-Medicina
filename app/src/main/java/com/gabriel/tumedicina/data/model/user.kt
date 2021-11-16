@@ -11,7 +11,7 @@ data class user(val documento:String = " ",
                 val contrasena:String = " ",
                 val tipoDocumento:String = " ",
                 val correo:String = " ",
-  //              val fechaNacimiento:Date = " "
+                val fechaNacimiento:String = " "
 ){
 
 }

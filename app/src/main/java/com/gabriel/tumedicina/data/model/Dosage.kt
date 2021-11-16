@@ -5,11 +5,11 @@ import java.util.*
 data class Dosage(val idTratamiento:Int = -1,
                   val medicamento:String = " ",
                   val dosis:String = " ",
-   //               val fechaInicio:Date = " ",
+                  val fechaInicio:String = " ",
                   val hora:String = " ",
                   val periodicidad:String = " ",
                   val observaciones:String = " ",
-  //                val fechaFinal:Date = " "
+                  val fechaFinal:String = " "
 
 ){
 
